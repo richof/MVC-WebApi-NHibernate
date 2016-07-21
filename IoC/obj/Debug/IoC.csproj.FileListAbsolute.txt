@@ -7,7 +7,6 @@ G:\Lab\Filmes\IoC\bin\Debug\SimpleInjector.Integration.Web.dll
 G:\Lab\Filmes\IoC\bin\Debug\NHibernate.dll
 G:\Lab\Filmes\IoC\bin\Debug\FluentNHibernate.dll
 G:\Lab\Filmes\IoC\bin\Debug\Filmes_Bussines.dll
-G:\Lab\Filmes\IoC\bin\Debug\EntityFramework.dll
 G:\Lab\Filmes\IoC\bin\Debug\Iesi.Collections.dll
 G:\Lab\Filmes\IoC\bin\Debug\Filmes_DataAccess.pdb
 G:\Lab\Filmes\IoC\bin\Debug\SimpleInjector.xml
@@ -16,7 +15,6 @@ G:\Lab\Filmes\IoC\bin\Debug\NHibernate.xml
 G:\Lab\Filmes\IoC\bin\Debug\FluentNHibernate.pdb
 G:\Lab\Filmes\IoC\bin\Debug\FluentNHibernate.xml
 G:\Lab\Filmes\IoC\bin\Debug\Filmes_Bussines.pdb
-G:\Lab\Filmes\IoC\bin\Debug\EntityFramework.xml
 G:\Lab\Filmes\IoC\bin\Debug\Iesi.Collections.xml
 G:\Lab\Filmes\IoC\obj\Debug\IoC.csprojResolveAssemblyReference.cache
 G:\Lab\Filmes\IoC\obj\Debug\IoC.dll

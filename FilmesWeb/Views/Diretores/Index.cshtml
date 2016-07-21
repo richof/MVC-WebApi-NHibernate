@@ -52,18 +52,11 @@
 
         function GuardarDiretor() {
             var idDiretor = $("#DiretorId").val();
-            var metodo = null;
-            if (IsNotNull(idDiretor)) {
-                metodo = "put";
-            } else {
-                metodo = "post";
-            }
-            alert(metodo);
+            var metodo = SeleccionarMetodo(idDiretor);
             var diretor = CriarObjeto();
-
             $.ajax({
                 type: metodo,
-                url:"/api/DiretoresWebApi",
+                url:"/api/DiretoresWebApi/",
                 data: diretor,
                 contentType: "application/x-www-form-urlencoded",
                 success: function (responseData, textStatus, jqXHR) {
@@ -126,6 +119,13 @@
                 return false;
             } else {
                 return true;
+            }
+        }
+        function SeleccionarMetodo(valor) {
+            if (IsNotNull(valor)) {
+                return "put";
+            } else {
+               return "post";
             }
         }
     </script>

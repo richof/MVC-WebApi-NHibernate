@@ -66,14 +66,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contexto\ContextoDB.cs" />
-    <Compile Include="EntityConfigurations\DiretorConfig.cs" />
-    <Compile Include="EntityConfigurations\FilmeConfig.cs" />
-    <Compile Include="Migrations\201607151441029_inicial.cs" />
-    <Compile Include="Migrations\201607151441029_inicial.Designer.cs">
-      <DependentUpon>201607151441029_inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NHibernateConfiguration\HNibernateSession.cs" />
     <Compile Include="NHibernateConfiguration\Interfaces\INHibernateSession.cs" />
     <Compile Include="NHibernateConfiguration\Mapping\DiretorMap.cs" />
@@ -91,11 +83,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201607151441029_inicial.resx">
-      <DependentUpon>201607151441029_inicial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

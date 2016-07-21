@@ -17,6 +17,4 @@ G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\EntityFramework.dll
 G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\EntityFramework.SqlServer.dll
 G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\EntityFramework.xml
 G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\EntityFramework.SqlServer.xml
-G:\Lab\Filmes\Filmes_DataAccess\obj\Debug\Filmes_DataAccess.Migrations.inicial.resources
-G:\Lab\Filmes\Filmes_DataAccess\obj\Debug\Filmes_DataAccess.csproj.GenerateResource.Cache
 G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\Microsoft.Web.Infrastructure.dll

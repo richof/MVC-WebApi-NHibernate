@@ -65,7 +65,6 @@ G:\Lab\Filmes\FilmesWeb\bin\WebActivator.dll
 G:\Lab\Filmes\FilmesWeb\bin\NHibernate.dll
 G:\Lab\Filmes\FilmesWeb\bin\FluentNHibernate.dll
 G:\Lab\Filmes\FilmesWeb\bin\Filmes_Bussines.dll
-G:\Lab\Filmes\FilmesWeb\bin\EntityFramework.dll
 G:\Lab\Filmes\FilmesWeb\bin\SimpleInjector.Integration.Web.dll
 G:\Lab\Filmes\FilmesWeb\bin\Iesi.Collections.dll
 G:\Lab\Filmes\FilmesWeb\bin\Filmes_DataAccess.pdb
@@ -77,7 +76,6 @@ G:\Lab\Filmes\FilmesWeb\bin\NHibernate.xml
 G:\Lab\Filmes\FilmesWeb\bin\FluentNHibernate.pdb
 G:\Lab\Filmes\FilmesWeb\bin\FluentNHibernate.xml
 G:\Lab\Filmes\FilmesWeb\bin\Filmes_Bussines.pdb
-G:\Lab\Filmes\FilmesWeb\bin\EntityFramework.xml
 G:\Lab\Filmes\FilmesWeb\bin\SimpleInjector.Integration.Web.xml
 G:\Lab\Filmes\FilmesWeb\bin\Iesi.Collections.xml
 G:\Lab\Filmes\FilmesWeb\bin\AutoMapper.dll

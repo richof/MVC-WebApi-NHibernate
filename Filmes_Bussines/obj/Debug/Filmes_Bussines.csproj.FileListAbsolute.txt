@@ -2,4 +2,3 @@ G:\Lab\Filmes\Filmes_Bussines\bin\Debug\Filmes_Bussines.dll
 G:\Lab\Filmes\Filmes_Bussines\bin\Debug\Filmes_Bussines.pdb
 G:\Lab\Filmes\Filmes_Bussines\obj\Debug\Filmes_Bussines.dll
 G:\Lab\Filmes\Filmes_Bussines\obj\Debug\Filmes_Bussines.pdb
-G:\Lab\Filmes\Filmes_Bussines\obj\Debug\Filmes_Bussines.csprojResolveAssemblyReference.cache
