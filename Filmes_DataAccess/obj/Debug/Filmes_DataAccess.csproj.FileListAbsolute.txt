@@ -13,8 +13,3 @@ G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\FluentNHibernate.xml
 G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\Iesi.Collections.xml
 G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\NHibernate.xml
 G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\Filmes_DataAccess.dll.config
-G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\EntityFramework.dll
-G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\EntityFramework.SqlServer.dll
-G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\EntityFramework.xml
-G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\EntityFramework.SqlServer.xml
-G:\Lab\Filmes\Filmes_DataAccess\bin\Debug\Microsoft.Web.Infrastructure.dll
