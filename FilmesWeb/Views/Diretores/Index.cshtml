@@ -1,0 +1,181 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@section scripts{
+   
+    <script>
+        var Url = "/api/DiretoresWebApi/";
+        $(document).ready(function () {
+            $("#Nacimento").datepicker({
+                dateformat: "dd/mm/yyyy"
+            });
+            ListarDiretores();
+            $("form").attr("id", "formulario");
+            $("#formulario").submit(function () {
+
+                GuardarDiretor();
+                ListarDiretores();
+            });
+            $("table tbody").on("click", "a.LinkEditar", function () {
+                var idDiretor = $(event.target).attr("id");
+
+                SelecionarDiretor(idDiretor);
+            });
+        });
+
+        function ListarDiretores() {
+            //var url = "/api/DiretoresWebApi";
+            $("thead tr th:first").hide();
+            $.getJSON(Url, function (resultado) {
+                $.each(resultado, function (i, diretor) {
+                    var fila = $("<tr></tr>").attr("id", i);
+                    var colId = $("<td></td>").text(diretor.DiretorId).hide();
+                    var colNome = $("<td></td>").text(diretor.Nome);
+                    var colPais = $("<td></td>").text(diretor.Pais);
+                    var colNac = $("<td></td>").text(diretor.Nacimento);
+                    var colOperacoes = $("<td></td>");
+                    var linkEditar = $("<a></a>").attr("href", "#").attr("class", "LinkEditar").attr("id", diretor.DiretorId).html("Editar");
+                    colOperacoes.append(linkEditar);
+                    fila.append(colId);
+                    fila.append(colNome);
+                    fila.append(colPais);
+                    fila.append(colNac);
+                    fila.append(colOperacoes);
+                    $("tbody").append(fila);
+                });
+            });
+        }
+
+
+        function GuardarDiretor() {
+            var idDiretor = $("#DiretorId").val();
+            var metodo = null;
+            if (IsNotNull(idDiretor)) {
+                metodo = "put";
+            } else {
+                metodo = "post";
+            }
+            alert(metodo);
+            var diretor = CriarObjeto();
+
+            $.ajax({
+                type: metodo,
+                url:"/api/DiretoresWebApi",
+                data: diretor,
+                contentType: "application/x-www-form-urlencoded",
+                success: function (responseData, textStatus, jqXHR) {
+                    alert("dados guardados !!!");
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(errorThrown);
+                }
+            });
+            metodo = null;
+        }
+
+        function CriarObjeto() {
+            var idDiretor = $("#DiretorId").val();
+            var nome = $("#Nome").val();
+            var pais = $("#Pais").val();
+            var nacimento = $("#Nacimento").val();
+            var diretor = {};
+            if (IsNotNull(idDiretor)) {
+                diretor = { DiretorId: idDiretor, Nome: nome, Pais: pais, Nacimento: nacimento };
+            } else {
+                diretor = { Nome: nome, Pais: pais, Nacimento: nacimento };
+
+            }
+
+            return diretor;
+        }
+
+        function SelecionarDiretor(idDiretor) {
+            //var tableRow = $("td").filter(function () {
+            //    return $(this).text() == texto;
+            //}).closest("tr");
+            //var idFila = tableRow.attr("id");
+            //var colId = $("#" + idFila + " td:first");
+            //var colNome = colId.closest("td").next();
+            //var colPais = colNome.closest("td").next();
+            //var colNacimento = colPais.closest("td").next();
+            $.ajax({
+                url: Url, //"/api/DiretoresWebApi/",
+                datatype: "json",
+                type: "get",
+                data: { id: idDiretor },
+                success:
+                    function (diretor) {
+                        $("#DiretorId").val(diretor.DiretorId);
+                        $("#Nome").val(diretor.Nome);
+                        $("#Pais").val(diretor.Pais);
+                        $("#Nacimento").val(diretor.Nacimento);
+
+                    }
+
+
+
+            });
+           
+        }
+
+        function IsNotNull(valor) {
+            if (valor === '' || valor === null || typeof valor === 'undefined') {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+}
+@using (Html.BeginForm())
+{
+    @Html.Hidden("DiretorId")
+    <div class="form-horizontal">
+
+        <hr />
+        @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@
+        @*<div class="form-group">
+                @Html.Label("Id", null, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBox("DiretorId", null, new { @class = "form-control", @disabled = "disabled" })
+
+                </div>
+            </div>*@
+        <div class="form-group">
+            @Html.Label("Nome", null, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("Nome", null, new { @class = "form-control", @required = "required" })
+
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Pais", null, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("Pais", null, new { @class = "form-control", @required = "required" })
+
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Nacimento", null, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("Nacimento", null, new { @class = "form-control", @required = "required" })
+                <input type="submit" value="Guardar" id="btnGuardar" />
+            </div>
+        </div>
+    </div>
+}
+<table class="table" id="tabela">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Pais</th>
+            <th>Data de Nacimento</th>
+            <th> Operacões</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>

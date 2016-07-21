@@ -1,0 +1,6 @@
+namespace FilmesWeb.Areas.HelpPage.ModelDescriptions
+{
+    public class SimpleTypeModelDescription : ModelDescription
+    {
+    }
+}
